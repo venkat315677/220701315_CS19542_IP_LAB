@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+</head>
+<style>
+    img{
+        height: 100px;
+        width: 35%;
+    }
+    #table1{
+        text-align: center;
+        border: solid;
+        border-collapse: collapse;
+        
+    }
+
+    #table1 th,td{
+        padding:10px;
+        border-style: solid;
+    
+
+    }
+    td{
+        font-weight: bold;
+    }
+    H6{
+        color: red;
+        margin: 0;
+    }
+   #break {
+         transform: rotate(-90deg); 
+    } 
+    #head{
+        display: flex;
+        text-align: center;
+    }
+    #head2{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+    }
+</style>
+<body>
+    <section id="head" >
+    <img src="rec logo.png.png" alt="rec logo">
+    <div >
+    <h3>"RAJALAKSHMI ENGINEERING COLLEGE <br>
+        DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING<br>
+        Time Table for Academic Year 2024-2025 (Odd Semester - JUL'24 - NOV'24)"									                                    
+    </h3>
+    </div>
+    </section>
+        <section id="head2">
+        <h5> Year: III CSE  </h5>   <h5>Sem: V    </h5>     <h5>  Sec: E  </h5>  <h5>   Wef:  10.07.2024   </h5>
+        </section>
+        <table border="1" id="table1">
+            <tr>
+                <th colspan="2">Class Incharge</th>
+                <th colspan="8">Class Commitee Chairman</th>
+            </tr>
+            <tr>
+                <th colspan="2">Mrs.Anitha Ashishdeep	</th>
+                <th colspan="8">Dr. S. Vinodh Kumar	    </th>
+            </tr>
+         
+            <tr>
+                <th>DAY</th>
+                <th>1 <br>8:00-9:00</th>
+                <th>2 <br>9:00-9:50</th>
+                <th> 9.50-10:10</th>
+                <th>3 <br>10:10-11:00</th>
+                <th>4 <br>11:00-11:50</th>
+                <th>5/L <br>11:50-12.30/12.40</th>
+                <th>L/5 <br>12.30/12.40-1:20</th>
+                <th>6 <br>1:20-2:10</th>
+                <th>7 <br>2:10-3:00</th>
+            </tr>
+            <tr>
+                <td>TUESDAY</td>
+                <td colspan="2">OA11903-RPA <H6>TLGL2</H6></td>
+                <td rowspan="5" id="break" >BREAK</td> 
+                <td colspan="2">CS19542-IP <h6>A105</h6></td>
+                <td>LUNCH</td>
+                <td>AI19341-POAI <h6>A311</h6></td>
+                <td colspan="2">CS19542/CS19541-IP/CN LAB <h6>TLFL5/TLFL3</h6></td>
+            </tr>
+            <tr>
+                <td>WEDNESDAY</td>
+                <td colspan="2">CS19541/CS19542-CN/IP LAB <h6>TLFL3/TLFL5</h6></td>
+                <td colspan="2">CS19542-IP <h6>A105</h6></td>
+                <td>LUNCH</td>
+                <td>CS19501-TOC <h6>A311</h6></td>
+                <td>CS19541-CN <h6>A311</h6></td>
+                <td>LIB</td>
+            </tr>
+            <tr>
+                <td>THURSDAY</td>
+                <td colspan="2">CS19542/CS19541-IP/CN LAB <h6>TLFL5/TLFL3</h6></td>           
+                <td>AI19341-POAI<h6>A303</h6></td>
+                <td colspan="2">VAP</td>
+                <td>LUNCH</td>
+                <td>CS19501-TOC<h6>A311</h6></td>
+                <td>CS19541-CN<h6>A311</h6></td>
+                
+            </tr>
+            <tr>
+                <td>FRIDAY</td>
+                <td>CS19541-CN<h6>A311</h6></td>
+                <td>CS19501-TOC<h6>A311</h6></td>
+                <td>COUN</td>
+                <td>LUNCH</td>
+                <td colspan="2">CS19541/AI19341-CN/POAI LAB<h6>TLFL3/TLFL5</h6></td>
+                <td>NPTEL<h6>A311</h6></td>
+                <td>AI19341-POAI<h6>A311</h6></td>
+                
+                
+            </tr>
+            <tr>
+                <td>SATURDAY</td>
+                <td>CS19501-TOC<h6>A311</h6></td>
+                <td>LIB</td>
+                <td>CS19541-CN<h6>A311</h6></td>
+                <td>LUNCH</td>
+                <td colspan="2">AI19341/CS19542-POAI/IP LAB<h6>TLFL3/JL1</h6></td>
+                <td colspan="2">OA11903-RPA<h6>TLFL2</h6></td>
+            </tr>
+            <tr>
+                <td colspan="10" > <br><br></td>
+                
+            </tr>
+             <tr>
+                <th>COURSE CODE</th>
+                <th colspan="2">COURSE TITLE</th>
+                <th>STAFF CODE</th>
+                <th colspan="2">STAFF TITLE</th>
+                <th>L</th>
+                <th>T</th>
+                <th>P</th>
+                <th>TUTORIAL/LAB/ASSISTANT</th>
+             </tr>
+             <TR>
+                <td>CS19501</td>
+                <td colspan="2">Theory of Computation</td>
+                <td>CS272</td>
+                <td colspan="2">Mrs.S.Vinodhini</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+             </TR>
+             <tr>
+                <td>OAI1903</td>
+                <td colspan="2">Introduction to Robotics Process Automation</td>
+                <td></td>
+                <td colspan="2">Mrs.M.Bhavani</td>
+                <td>0</td>
+                <td>0</td>
+                <td>4</td>
+                <td></td>
+             </tr>
+             <tr>
+                <td>CS19541</td>
+                <td colspan="2">Computer Networks</td>
+                <td>CS288</td>
+                <td colspan="2">Mrs.Anitha Ashishdeep</td>
+                <td>4</td>
+                <td>0</td>
+                <td>4</td>
+                <td>Mrs.S.Sivagami</td>
+             </tr>
+             <tr>
+                <td>CS19542</td>
+                <td colspan="2">Internet Programming</td>
+                <td>IT03</td>
+                <td colspan="2">Dr.P.Kumar</td>
+                <td>4</td>
+                <td>0</td>
+                <td>4</td>
+                <td>Mrs.M.Santhiya</td>
+             </tr>
+             <tr>
+                <td>AI19341</td>
+                <td colspan="2">Principles of Artificial Intelligence</td>
+                <td>CS310</td>
+                <td colspan="2">Mrs.S.Sandhiya Vani</td>
+                <td>3</td>
+                <td>0</td>
+                <td>2</td>
+                <td></td>
+             </tr>
+             <tr>
+                <td>COUN</td>
+                <td colspan="2">Counselling Hour</td>
+                <td>CS226 / CS262 / -</td>
+                <td colspan="2">Mrs.M.Santhiya / Dr.T.Kumaragurubaran / Mr.Raghu</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+             </tr>
+             <tr>
+                <td>NPTEL</td>
+                <td colspan="2">NPTEL</td>
+                <td>CS255</td>
+                <td colspan="2">Dr.K.Ananthajothi</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+             </tr>
+             <tr>
+                <td>LIB</td>
+                <td colspan="2">Library</td>
+                <td>CS302</td>
+                <td colspan="2">Mrs.V.Auxilia Osvin Nancy</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+             </tr>
+             <tr>
+                <td></td>
+                <td colspan="2">VAP</td>
+                <td>CS282</td>
+                <td colspan="2">Mrs.V.Ariyamala</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+             </tr>
+        </table>
+        
+
+</body>
+</html>

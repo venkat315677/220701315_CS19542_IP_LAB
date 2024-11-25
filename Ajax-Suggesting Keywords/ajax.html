@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Name Suggestion</title>
+    <style>
+        #suggestions {
+            border: 1px solid #ccc;
+            display: none;
+            max-height: 150px;
+            overflow-y: auto;
+            width: 200px;
+        }
+        #suggestions div {
+            padding: 8px;
+            cursor: pointer;
+        }
+        #suggestions div:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+    <script>
+        function showSuggestions(str) {
+            if (str.length == 0) {
+                document.getElementById("suggestions").style.display = "none";
+                return;
+            }
+
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var suggestions = document.getElementById("suggestions");
+                    suggestions.innerHTML = this.responseText;
+                    suggestions.style.display = "block";
+                }
+            };
+
+            xhr.open("GET", "Ajax?query=" + str, true);
+            xhr.send();
+        }
+
+        function setStudentName(name) {
+            document.getElementById("studentName").value = name;
+            document.getElementById("suggestions").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter Student Name:</h2>
+    <input type="text" id="studentName" onkeyup="showSuggestions(this.value)">
+    <div id="suggestions"></div>
+</body>
+</html>

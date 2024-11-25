@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <h1>Welcome to Ajax example</h1>
+    </head>
+    <body>
+        <script>
+            function ajaxExample(){
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if(xmlhttp.readyState == 4 && xmlhttp.status==200){
+                    document.getElementById("Change").innerHTML = xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","rec.txt",true);
+            xmlhttp.send();
+        }
+        </script>
+        <div id="Change">
+             Welcome to Rajalakshmi Engineering College!!
+        </div>
+        <button onclick="ajaxExample()">Change the content here!</button>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+        }
+        select, input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .details {
+            margin-top: 20px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Details</h2>
+    <form action="StudentServlet" method="post">
+        <label for="regNo">Select Registration Number:</label>
+        <select id="regNo" name="regNo" required>
+            <option value="">-- Select Reg-No --</option>
+            <option value="REG001">REG001</option>
+            <option value="REG002">REG002</option>
+            <option value="REG003">REG003</option>
+            <option value="REG004">REG004</option>
+        </select>
+        <input type="submit" value="Get Details">
+    </form>
+</div>
+
+</body>
+</html>

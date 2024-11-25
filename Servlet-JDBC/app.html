@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+</head>
+<body>
+
+    <h1>Library Management System</h1>
+
+    <form action="LibraryServlet" method="POST">
+        <h2>Insert/Update Book Information</h2>
+        <label for="accno">Account Number:</label><br>
+        <input type="text" id="accno" name="accno"><br><br>
+
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author"><br><br>
+
+        <label for="publisher">Publisher:</label><br>
+        <input type="text" id="publisher" name="publisher"><br><br>
+
+        <label for="edition">Edition:</label><br>
+        <input type="text" id="edition" name="edition"><br><br>
+
+        <label for="price">Price:</label><br>
+        <input type="text" id="price" name="price"><br><br>
+
+        <input type="submit" name="action" value="Insert">
+        <input type="submit" name="action" value="Update">
+    </form>
+
+    <form action="LibraryServlet" method="POST">
+        <h2>Delete Book</h2>
+        <label for="accno">Account Number:</label><br>
+        <input type="text" id="accno" name="accno"><br><br>
+        <input type="submit" name="action" value="Delete">
+    </form>
+
+    <form action="LibraryServlet" method="POST">
+        <h2>Display Book Information</h2>
+        <input type="submit" name="action" value="Display All">
+    </form>
+
+</body>
+</html>

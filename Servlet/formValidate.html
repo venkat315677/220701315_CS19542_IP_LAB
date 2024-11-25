@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation Example</title>
+    <style>
+        .form-container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styling submit button */
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Change button color on hover */
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Error message styling */
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        
+         <div class="error-message" id="error-message"></div>
+        
+        <form action="register" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+     <script>
+        // JavaScript to read the error parameter from the URL and display it
+        const urlParams = new URLSearchParams(window.location.search);
+        const errorMessage = urlParams.get('error');
+        if (errorMessage) {
+            document.getElementById('error-message').innerText = decodeURIComponent(errorMessage);
+        }
+    </script>
+</body>
+</html>
